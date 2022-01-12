@@ -29,20 +29,23 @@
       <form>
         <div class="campo">
           <label for="nome">Nome:</label>
-          <input type="text" id="nome">
+          <input type="text" id="nome" onkeyup="validaNome()">
+          <div id="txtNome" class="margin-top01"></div>
         </div>
-        
-         <div class="campo">
+
+        <div class="campo">
           <label for="email">E-mail:</label>
-          <input type="email" id="email">
-         </div>
+          <input type="email" id="email" onkeyup="validaEmail()">
+          <div id="txtEmail" class="margin-top01"></div>
+        </div>
         
         <div class="campo">
           <label for="assunto">Assunto:</label>
-          <textarea name="assunto" id="assunto" rows="5"></textarea>
+          <textarea name="assunto" id="assunto" rows="5" onkeyup="validaAssunto()"></textarea>
+          <div id="txtAssunto" class="margin-top01"></div>
         </div>
         
-        <button>Enviar</button>
+        <button onclick="enviar()">Enviar</button>
       </form>
     </div>
 
@@ -53,15 +56,19 @@
       <p>Vila Guarani, São Paulo - SP</p>
 
       <iframe
+      class="sizemap"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.1729617303185!2d-46.6441212850209!3d-23.633976084646942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5af091ee2fcf%3A0xe8fa6d5208cf2855!2sIta%C3%BA%20Unibanco%20Centro%20Empresarial!5e0!3m2!1spt-BR!2sbr!4v1641909849611!5m2!1spt-BR!2sbr"  
       style="border:0;" 
-      allowfullscreen="" width="500" height="350"
-      loading="lazy">
+      allowfullscreen="" 
+      loading="lazy"
+      id="mapa"
+      onmousemove="mapaZoom()"
+      onmouseout="mapaNormal()">
       </iframe>
     </div>
 
   </div>
- 
+
   <hr>
 
 <footer>
@@ -84,6 +91,8 @@
   </p>
 
 </footer>
+
+<script src="./assets/js/script.js"></script>
 
 </body>
 </html>

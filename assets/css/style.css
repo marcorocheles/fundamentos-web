@@ -3,6 +3,19 @@
   text-align: center;
 }
 
+.left{
+  text-align: left;
+}
+
+.margin-top01{
+  margin-top: .7rem;
+}
+
+.justifyLeft{
+  align-items: left;
+  justify-content: left;
+}
+
 /* sempre que for preciso centralizar um item como foto, vídeo etc, crie uma div e siga o conceito de um container que deve receber algo e organizar esses itens */
 .container{
   display: flex;
@@ -77,8 +90,8 @@ form {
 }
 
 .campo input, .campo textarea{
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  padding: 0.3rem;
+  font-size: 1rem;
   border: 0;
   border-bottom: 1px solid #63adcf;
   /* adicionando uma borda solida só na parte de baixo */
@@ -104,8 +117,8 @@ button:hover{
 }
 
 .sizemap{
-  width: 150%;
-  height: 20rem;
+  width: 31.25rem;
+  height: 21.875rem;
 }
 
 .marginleft{
